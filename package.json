@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "tailwindcss": "^4.1.4"
+  },
+  "scripts": {
+    "watch": "npx @tailwindcss/cli -i ./input.css -o ./output.css --watch",
+    "build": "npx tailwindcss -i ./input.css -o ./output.css --minify && npx postcss ./output.css -o ./dist/output.min.css"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.4",
+    "@tailwindcss/postcss": "^4.1.4",
+    "autoprefixer": "^10.4.21",
+    "cssnano": "^7.0.6",
+    "postcss": "^8.5.3",
+    "postcss-cli": "^11.0.1"
+  }
+}
