@@ -1,11 +1,13 @@
 <footer class="bg-[#f9f9f9] border-t border-gray-300 h-[80px] text-sm text-gray-500 max-lg:flex-col max-lg:py-3 flex items-center justify-between px-4">
-    <div class="text-center sm:text-left w-full sm:w-auto">
-        © 2025 Parfüm Yorum | Tüm hakları saklıdır.
-    </div>
-    <div class="flex gap-4">
-        <a href="/iletisim.php" class="hover:underline">İletişim</a>
-        <a href="/gizlilik-politikasi.php" class="hover:underline">Gizlilik Politikası</a>
-        <a href="/kullanim-sartlari.php" class="hover:underline">Kullanım Şartları</a>
+    <div class="container mx-auto flex items-center justify-between h-full max-sm:flex-col-reverse">
+        <div class="text-center sm:text-left w-full sm:w-auto">
+            © 2025 Parfüm Yorum | Tüm hakları saklıdır.
+        </div>
+        <div class="flex gap-4">
+            <a href="/iletisim.php" class="hover:underline">İletişim</a>
+            <a href="/gizlilik-politikasi.php" class="hover:underline">Gizlilik Politikası</a>
+            <a href="/kullanim-sartlari.php" class="hover:underline">Kullanım Şartları</a>
+        </div>
     </div>
 </footer>
 </body>

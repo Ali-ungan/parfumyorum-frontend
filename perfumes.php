@@ -1,9 +1,9 @@
 <?php include 'header.php'; ?>
 
 <main class="flex-grow pt-[150px] pb-16 max-lg:pt-[100px]">
-    <div class="container mx-auto px-4 max-w-6xl flex max-lg:flex-col gap-8">
+    <div class="container mx-auto px-4 max-w-6xl grid lg:grid-cols-[3fr_9fr] grid-cols-1 gap-8">
 
-        <aside id="mobileFilterSidebar" class="lg:block col-span-1 min-w-[250px] max-lg:hidden">
+        <aside id="mobileFilterSidebar" class="lg:block max-lg:hidden">
             <div class="space-y-5">
                 <div class="bg-gray-50 group/filter border border-gray-200 rounded-lg">
                     <button type="button" data-toggle-target="brand-filter" class="w-full flex justify-between items-center px-4 py-2 text-sm font-semibold text-black bg-gray-50 hover:bg-gray-100 rounded-lg transition cursor-pointer focus:outline-none">
@@ -164,11 +164,11 @@
             </div>
         </aside>
 
-        <div class="col-span-3 min-lg:min-w-[850]">
-            <div class="flex items-center justify-between mb-6 gap-3">
+        <div class="">
+            <div class="grid grid-cols-1 sm:grid-cols-[4fr_8fr] lg:grid-cols-2 mb-6 gap-3">
                 <h1 class="text-2xl md:text-3xl font-bold text-gray-800">Parfümler</h1>
-                <form action="/parfumler" method="GET" class="w-full max-w-sm flex items-center justify-end gap-3">
-                    <div class="relative">
+                <form action="/parfumler" method="GET" class="w-full flex items-center justify-end gap-3">
+                    <div class="relative w-full">
                         <input type="text" id="search" name="q" placeholder="Parfüm ara..." class="w-full bg-white border z-1 border-gray-300 rounded-full py-2 pl-4 pr-12 text-sm focus:outline-none hover:border-gray-400" />
                         <button type="submit" class="absolute right-3 top-2 text-gray-500 hover:text-black transition z-0 cursor-pointer">
                             <i class="fas fa-search"></i>

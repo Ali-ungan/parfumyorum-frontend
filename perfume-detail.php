@@ -5,8 +5,8 @@
 
         <div class="lg:col-span-1">
             <div class="sticky top-32">
-                <div class="w-full overflow-hidden rounded-xl shadow-md">
-                    <img src="/images/perfume-2.webp" alt="Dior Sauvage" class="w-full h-auto object-cover max-lg:max-h-[400px]">
+                <div class="w-full overflow-hidden rounded-xl lg:shadow-md ">
+                    <img src="/images/perfume-2.webp" alt="Dior Sauvage" class="w-full h-auto lg:object-cover object-contain object-center max-lg:max-h-[400px] max-lg:shadow-2xl">
                 </div>
             </div>
         </div>
@@ -16,7 +16,7 @@
                 Dior Sauvage Eau De Parfum
             </h1>
 
-            <article class="custom-text-editor mb-12">
+            <article class="custom-text-editor sm:mb-12">
                 <h2>1. Parfüm Hakkında Genel Bilgi</h2>
                 <p>Dior Sauvage, çağdaş erkeğin imzası haline gelmiş, taze ve etkileyici bir kokudur.</p>
                 <h2>2. Tasarım ve Şişe Detayları</h2>
@@ -25,48 +25,31 @@
                 <p>Günlük ve özel kullanım için ideal bir seçimdir.</p>
             </article>
 
-            <section class="mb-16 pt-8 bg-gray-50 rounded-xl">
-                <div class="flex justify-between max-lg:justify-evenly">
-                    <?php
-                    $notes = [
-                        'Üst Nota' => [
-                            ['src' => '/images/note-1.jpg', 'alt' => 'Bergamot'],
-                            ['src' => '/images/note-2.jpg', 'alt' => 'Grey Pepper'],
-                        ],
-                        'Orta Nota' => [
-                            ['src' => '/images/note-3.jpg', 'alt' => 'Lavanta'],
-                            ['src' => '/images/note-4.jpg', 'alt' => 'Anason'],
-                            ['src' => '/images/note-5.jpg', 'alt' => 'Paçuli'],
-                        ],
-                        'Alt Nota' => [
-                            ['src' => '/images/note-6.jpg', 'alt' => 'Amber'],
-                            ['src' => '/images/note-7.jpg', 'alt' => 'Sedir'],
-                        ]
-                    ];
-                    $i = 0;
-                    foreach ($notes as $group => $items) {
-                        if ($i > 0) {
-                            echo '<div class="w-[1px] border-l border-gray-200 md:block min-h-max"></div>';
-                        }
-                        echo '<div>';
-                        echo '<h3 class="text-lg font-semibold text-black mb-4 text-center">' . $group . '</h3>';
-                        echo '<div class="grid grid-cols-2 items-center gap-5 max-lg:grid-cols-1">';
-                        foreach ($items as $note) {
-                            echo '
-                                <div class="bg-white shadow p-2 rounded-lg flex flex-col justify-center items-center gap-2 w-[100px] h-[100px]">
-                                    <img src="' . $note['src'] . '" alt="' . $note['alt'] . '" class="w-12 h-12 object-contain">
-                                    <span class="text-gray-700 text-sm text-center">' . $note['alt'] . '</span>
+            <section class="lg:mb-16 max-lg:mb-8 pt-8 bg-gray-50 rounded-xl">
+                <div class="flex justify-between max-xl:grid max-xl:grid-cols-1 max-xl:gap-4">
+                    <?php for ($i = 0; $i < 3; $i++): ?>
+                        <div class="max-xl:divide-y max-xl:divide-gray-300">
+                            <h3 class="text-xl font-semibold text-black mb-4 xl:text-center max-xl:pb-2">Üst Nota</h3>
+                            <div class="max-xl:grid max-xl:grid-rows-[1fr]">
+                                <div class="grid grid-cols-2 items-center gap-5 max-sm:grid-cols-3 max-md:grid-cols-4 max-xl:grid-cols-5 max-xl:overflow-hidden">
+                                    <?php for ($a = 0; $a < 6; $a++): ?>
+                                        <div class="bg-white shadow p-2 rounded-xl flex flex-col justify-center items-center gap-2 w-[100px] h-[100px]">
+                                            <img src="/images/note-1.jpg" alt="Bergamot" class="w-12 h-12 object-contain">
+                                            <span class="text-gray-700 text-sm text-center">Bergamot</span>
+                                        </div>
+                                    <?php endfor; ?>
+
                                 </div>
-                            ';
-                        }
-                        echo '</div></div>';
-                        $i++;
-                    }
-                    ?>
+                            </div>
+                        </div>
+                        <div class="h-auto w-px bg-black/10 hidden lg:block last:hidden"></div>
+                    <?php endfor; ?>
                 </div>
             </section>
 
-            <div class="mt-10 border-t border-gray-300 pt-6 flex items-center justify-between gap-4 text-sm text-gray-600 flex-wrap">
+
+
+            <div class="lg:mt-10 border-t border-gray-300 pt-6 flex items-center justify-between gap-4 text-sm text-gray-600 flex-wrap">
                 <div class="flex items-center gap-4">
                     <span class="whitespace-nowrap">Bu yazıyı paylaş:</span>
                     <a href="#" class="hover:text-blue-500 transition" title="Facebook" aria-label="Facebook ile paylaş"><i class="fab fa-facebook-square text-lg"></i></a>
@@ -93,7 +76,7 @@
 
             <section id="comments" class="mt-6 border-t border-gray-300 pt-8">
                 <h4 class="text-xl font-semibold text-gray-800 mb-6">Tüm Yorumlar</h4>
-                <div class="mt-4 space-y-6 mb-16">
+                <div class="mt-4 space-y-6 lg:mb-16">
 
                     <!-- Yorum 1 -->
                     <div class="flex items-start gap-3">
@@ -163,19 +146,21 @@
 
         </div>
 
-        <section class="container mx-auto px-4 pt-10 lg:col-span-3">
-            <div class="flex items-center justify-between mb-4">
+        <section class="container mx-auto px-4 lg:pt-10 lg:col-span-3">
+            <div class="flex max-sm:flex-col max-sm:gap-4 items-center justify-between mb-2">
                 <h2 class="text-2xl font-semibold text-gray-800 select-none max-lg:text-[18px]">Diğer Parfümler</h2>
-                <div class="flex items-center gap-3 max-lg:gap-2">
-                    <div class="swiper-button-prev-related bg-white cursor-pointer w-9 h-9 rounded-full border border-gray-300 text-gray-700 flex items-center justify-center hover:bg-gray-50 transition-all duration-200">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-                        </svg>
-                    </div>
-                    <div class="swiper-button-next-related bg-white cursor-pointer w-9 h-9 rounded-full border border-gray-300 text-gray-700 flex items-center justify-center hover:bg-gray-50 transition-all duration-200">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                        </svg>
+                <div class="flex items-center gap-3 max-lg:gap-2 max-sm:flex-row-reverse">
+                    <div class="flex items-center gap-2">
+                        <div class="swiper-button-prev-related bg-white cursor-pointer w-9 h-9 rounded-full border border-gray-300 text-gray-700 flex items-center justify-center hover:bg-gray-50 transition-all duration-200">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                            </svg>
+                        </div>
+                        <div class="swiper-button-next-related bg-white cursor-pointer w-9 h-9 rounded-full border border-gray-300 text-gray-700 flex items-center justify-center hover:bg-gray-50 transition-all duration-200">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                            </svg>
+                        </div>
                     </div>
                     <a href="/parfumler" class="bg-white px-5 py-2 max-lg:px-2 select-none rounded-full border border-gray-300 text-sm font-medium text-gray-800 hover:bg-gray-100 hover:text-gray-900 transition-all duration-200">
                         Tümünü Gör

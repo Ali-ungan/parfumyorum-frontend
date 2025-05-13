@@ -39,19 +39,21 @@
         </div>
     </div> */ ?>
 
-    <section class="container mx-auto px-4 pt-10 pb-10">
-        <div class="flex items-center justify-between mb-2">
+    <section class="container mx-auto px-4 pt-7.5 sm:pt-10 pb-10">
+        <div class="flex max-sm:flex-col max-sm:gap-4 items-center justify-between mb-2">
             <h2 class="text-2xl font-semibold text-gray-800 select-none max-lg:text-[18px]">Popüler Parfümler</h2>
-            <div class="flex items-center gap-3 max-lg:gap-2">
-                <div aria-label="Önceki parfümü göster" class="swiper-button-prev-parfum bg-white cursor-pointer w-9 h-9 rounded-full border border-gray-300 text-gray-700 flex items-center justify-center hover:bg-gray-50 transition-all duration-200">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-                    </svg>
-                </div>
-                <div aria-label="Sonraki parfümü göster" class="swiper-button-next-parfum bg-white cursor-pointer w-9 h-9 rounded-full border border-gray-300 text-gray-700 flex items-center justify-center hover:bg-gray-50 transition-all duration-200">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                    </svg>
+            <div class="flex items-center gap-3 max-lg:gap-2 max-sm:flex-row-reverse">
+                <div class="flex items-center gap-3 max-lg:gap-2">
+                    <div aria-label="Önceki parfümü göster" class="swiper-button-prev-parfum bg-white cursor-pointer w-9 h-9 rounded-full border border-gray-300 text-gray-700 flex items-center justify-center hover:bg-gray-50 transition-all duration-200">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                        </svg>
+                    </div>
+                    <div aria-label="Sonraki parfümü göster" class="swiper-button-next-parfum bg-white cursor-pointer w-9 h-9 rounded-full border border-gray-300 text-gray-700 flex items-center justify-center hover:bg-gray-50 transition-all duration-200">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </div>
                 </div>
                 <a href="/parfumler" aria-label="Tüm popüler parfümleri gör" class="bg-white px-5 py-2 max-lg:px-2 select-none rounded-full border border-gray-300 text-sm font-medium text-gray-800 hover:bg-gray-50 hover:text-gray-900 transition-all duration-200">
                     Tümünü Gör
@@ -59,10 +61,10 @@
             </div>
         </div>
         <div class="swiper parfum-swiper relative">
-            <div class="swiper-wrapper py-5">
+            <div class="swiper-wrapper pt-5">
                 <?php for ($i = 0; $i < 8; $i++) : ?>
                     <div class="swiper-slide">
-                        <div class="bg-white p-4 rounded-xl shadow-md hover:shadow-lg transition transform">
+                        <div class="bg-white p-4 border border-gray-200 rounded-xl sm:shadow-sm sm:hover:shadow-md duration-300">
                             <a href="/perfume-detail.php" class="relative">
                                 <img src="/images/banner.jpg" alt="Parfüm" class="w-full h-48 object-cover rounded-xl mb-4">
                             </a>
@@ -82,19 +84,21 @@
         </div>
     </section>
 
-    <section class="container mx-auto px-4 pb-16 bg-gray-50">
-        <div class="flex items-center justify-between mb-8">
+    <section class="container mx-auto px-4 pb-10 bg-gray-50">
+        <div class="flex max-sm:flex-col max-sm:gap-4 items-center justify-between mb-2">
             <h2 class="text-2xl font-semibold text-gray-800 select-none max-lg:text-[18px]">Parfüm Karşılaştırmaları</h2>
-            <div class="flex items-center gap-3 max-lg:gap-2">
-                <div aria-label="Önceki karşılaştırmayı göster" class="swiper-button-prev-compare bg-white cursor-pointer w-9 h-9 rounded-full border border-gray-300 text-gray-700 flex items-center justify-center hover:bg-gray-50 transition-all duration-200">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-                    </svg>
-                </div>
-                <div aria-label="Sonraki karşılaştırmayı göster" class="swiper-button-next-compare bg-white cursor-pointer w-9 h-9 rounded-full border border-gray-300 text-gray-700 flex items-center justify-center hover:bg-gray-50 transition-all duration-200">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                    </svg>
+            <div class="flex items-center gap-3 max-lg:gap-2 max-sm:flex-row-reverse">
+                <div class="flex items-center gap-3 max-lg:gap-2">
+                    <div aria-label="Önceki karşılaştırmayı göster" class="swiper-button-prev-compare bg-white cursor-pointer w-9 h-9 rounded-full border border-gray-300 text-gray-700 flex items-center justify-center hover:bg-gray-50 transition-all duration-200">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                        </svg>
+                    </div>
+                    <div aria-label="Sonraki karşılaştırmayı göster" class="swiper-button-next-compare bg-white cursor-pointer w-9 h-9 rounded-full border border-gray-300 text-gray-700 flex items-center justify-center hover:bg-gray-50 transition-all duration-200">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </div>
                 </div>
                 <a href="/karsilastirmalar" aria-label="Tüm parfüm karşılaştırmalarını gör" class="bg-white px-5 py-2 max-lg:px-2 select-none rounded-full border border-gray-300 text-sm font-medium text-gray-800 hover:bg-gray-50 hover:text-gray-900 transition-all duration-200">
                     Tümünü Gör
@@ -103,10 +107,10 @@
         </div>
 
         <div class="swiper compare-swiper">
-            <div class="swiper-wrapper py-2">
+            <div class="swiper-wrapper pt-5">
                 <?php for ($i = 0; $i < 6; $i++) : ?>
                     <div class="swiper-slide">
-                        <div class="bg-white rounded-xl border border-gray-200 p-5 shadow-sm hover:shadow-md transition">
+                        <div class="bg-white p-5 border border-gray-200 rounded-xl sm:shadow-sm sm:hover:shadow-md duration-300">
                             <div class="grid grid-cols-2 gap-4 items-center mb-4">
                                 <div class="flex flex-col items-center">
                                     <img src="/images/perfume-2.webp" alt="Parfüm A" class="w-[100px] h-[100px] object-cover rounded-xl mb-2">
@@ -128,19 +132,21 @@
         </div>
     </section>
 
-    <section class="container mx-auto px-4 mb-16 max-lg:mb-5">
-        <div class="flex items-center justify-between mb-8">
+    <section class="container mx-auto px-4 mb-10 max-lg:mb-5">
+        <div class="flex max-sm:flex-col max-sm:gap-4 items-center justify-between mb-2">
             <h2 class="text-2xl font-semibold text-gray-800 select-none max-lg:text-[18px]">Blog & Yenilikler</h2>
-            <div class="flex items-center gap-3 max-lg:gap-2">
-                <div aria-label="Önceki yazıyı göster" class="swiper-button-prev-blog bg-white cursor-pointer w-9 h-9 rounded-full border border-gray-300 text-gray-700 flex items-center justify-center hover:bg-gray-50 transition-all duration-200">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-                    </svg>
-                </div>
-                <div aria-label="Sonraki yazıyı göster" class="swiper-button-next-blog bg-white cursor-pointer w-9 h-9 rounded-full border border-gray-300 text-gray-700 flex items-center justify-center hover:bg-gray-50 transition-all duration-200">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                    </svg>
+            <div class="flex items-center gap-3 max-lg:gap-2 max-sm:flex-row-reverse">
+                <div class="flex items-center gap-3 max-lg:gap-2">
+                    <div aria-label="Önceki yazıyı göster" class="swiper-button-prev-blog bg-white cursor-pointer w-9 h-9 rounded-full border border-gray-300 text-gray-700 flex items-center justify-center hover:bg-gray-50 transition-all duration-200">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                        </svg>
+                    </div>
+                    <div aria-label="Sonraki yazıyı göster" class="swiper-button-next-blog bg-white cursor-pointer w-9 h-9 rounded-full border border-gray-300 text-gray-700 flex items-center justify-center hover:bg-gray-50 transition-all duration-200">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </div>
                 </div>
                 <a href="/parfumler" class="bg-white px-5 py-2 max-lg:px-2 select-none rounded-full border border-gray-300 text-sm font-medium text-gray-800 hover:bg-gray-50 hover:text-gray-900 transition-all duration-200">
                     Tümünü Gör
@@ -148,10 +154,10 @@
             </div>
         </div>
         <div class="swiper blog-swiper relative">
-            <div class="swiper-wrapper py-2">
+            <div class="swiper-wrapper pt-5">
                 <?php for ($i = 0; $i < 6; $i++) : ?>
                     <div class="swiper-slide">
-                        <div class="bg-[#fefefe] p-5 rounded-xl shadow hover:shadow-md transition border border-gray-50">
+                        <div class="bg-[#fefefe] p-5 border border-gray-200 rounded-xl sm:shadow-sm sm:hover:shadow-md duration-300">
                             <a href="/blog-detail.php" class="relative">
                                 <img src="/images/banner.jpg" alt="Blog" class="w-full h-48 object-cover rounded mb-4">
                             </a>

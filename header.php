@@ -15,23 +15,20 @@
 
     <header class="w-full fixed top-0 left-0 z-50 bg-white border-b border-gray-200 shadow-sm px-4 md:px-8 h-[80px] flex items-center">
         <div class="container mx-auto flex justify-between items-center h-full">
-            <a href="/" class="text-2xl font-bold text-gray-800 tracking-wide select-none h-full flex items-center max-w-[185px]">
+            <a href="/" class="text-2xl font-bold text-gray-800 tracking-wide select-none h-full flex items-center max-w-30 xl:max-w-[185px]">
                 <img src="/images/logo.png">
             </a>
 
-            <!-- Mobile menu toggle -->
             <button id="menuToggle" class="hidden max-lg:flex text-2xl text-gray-700 hover:text-black focus:outline-none transition cursor-pointer">
                 <i class="fas fa-bars"></i>
             </button>
 
-            <!-- Desktop Nav -->
             <nav class="max-lg:hidden flex items-center gap-8">
                 <a href="/perfumes.php" class="nav-link">Parfüm İncelemeleri</a>
                 <a href="/compare.php" class="nav-link">Karşılaştırmalar</a>
                 <a href="/blog.php" class="nav-link">Blog</a>
             </nav>
 
-            <!-- Desktop Giriş -->
             <div class="max-lg:hidden flex items-center gap-4">
                 <form method="GET" class="w-full">
                     <div class="flex items-center gap-2 bg-white border border-gray-300 rounded-full px-4 py-2 shadow-sm focus:outline-none transition-all">
@@ -45,7 +42,6 @@
 
             <div id="mobileMenu" class="fixed hidden top-[80px] left-0 w-full bg-white border-t border-gray-200 shadow-md z-40 flex-col px-6 py-4 space-y-2">
                 <div class="flex flex-col">
-
                     <a href="/perfumes.php" class="mobile-nav-link">Parfüm İncelemeleri</a>
                     <a href="/compare.php" class="mobile-nav-link">Karşılaştırmalar</a>
                     <a href="/blog.php" class="mobile-nav-link">Blog</a>
@@ -57,7 +53,5 @@
                 </div>
             </div>
         </div>
-
-        <!-- Mobile Menu -->
 
     </header>
